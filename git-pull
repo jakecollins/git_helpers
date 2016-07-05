@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+set -x
+
+BRANCH=$1 # TODO generate branch from message
+MESSAGE=$2
+
+git checkout -b ${BRANCH}
+
+git commit -a -m "${MESSAGE}"
+
+git push origin ${BRANCH}

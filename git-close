@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+set -x
+
+git checkout master
+
+git pull --prune
+
+git branch -d ${BRANCH}

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+set -x
+
+git push --force-with-lease origin ${BRANCH}
